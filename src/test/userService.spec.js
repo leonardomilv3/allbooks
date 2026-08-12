@@ -2,7 +2,7 @@ const { usuarioExiste, emailExiste } = require('../services/userService');
 
 const { testeDB } = require('../config/database');
 
-describe('Testando função emailExiste de userService', () => {
+describe('Testando método emailExiste de userService', () => {
     it('deve retornar FALSE para email invalido', () => {
         const email = 'invalido@mail.com';
         expect(emailExiste(email, testeDB)).toBe(false);
@@ -24,7 +24,7 @@ describe('Testando função emailExiste de userService', () => {
 });
 
 
-describe('Testando função usuarioExiste de userService', () => {
+describe('Testando método usuarioExiste de userService', () => {
     it('deve retornar FALSE para email inexistente', () => {
         const email = undefined;
         const senha = 123456;
